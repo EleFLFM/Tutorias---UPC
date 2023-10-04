@@ -16,15 +16,20 @@ if ($filas) {
     $_SESSION['usuario'] = $usuario;
     $_SESSION['idcargo'] = $fila['idcargo'];
     $idcargo = $_SESSION['idcargo'];
-
+    $_SESSION['id_estado'] = $fila['id_estado'];
+    $id_estado = $_SESSION['id_estado'];
+    
+if($id_estado == 1){
     if ($idcargo == 1) {
         // Mostrar la página de administrador
         header("location: admin.php");
     } elseif ($idcargo == 2) {
         // Redirigir a la página de clientes
-        header("location: admin.php");
+        header("location: courses.php");
+}
+    
     } else {
-        echo "No tienes permisos para acceder a esta página.";
+        echo "No tienes permisos para acceder a esta página. Este usuario está inactivo";
         exit();
     }
 } else {
