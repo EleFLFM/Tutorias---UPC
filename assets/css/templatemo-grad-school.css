@@ -170,7 +170,7 @@ a.menu-link { display: none; }
 
 .main-header {
     background-color: rgba(255, 255, 255, 0.9);
-    height: 80px;
+    height: 110px;
     position: fixed;
     z-index: 12;
     width: 100%;
@@ -1662,7 +1662,7 @@ footer p a:hover {
   letter-spacing: 4px
 }
 
-.login-box a:hover {
+.login-box button:hover {
   background: #03f40f;
   color: #fff;
   border-radius: 5px;
