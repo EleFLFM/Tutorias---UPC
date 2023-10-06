@@ -415,6 +415,13 @@ p {
 .e-btn:first-letter {
   text-transform: uppercase;
 }
+.bienvenido{
+  position: relative;
+  top: calc(50% - 15px);
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
 .e-btn:hover {
   color: #ffffff;
   -webkit-box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
