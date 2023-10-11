@@ -15,6 +15,16 @@
 }
 
 
+.good {
+    color: rgb(4, 224, 34);
+    text-align: center;
+}
+
+.bad {
+    color: red;
+    text-align: center;
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;

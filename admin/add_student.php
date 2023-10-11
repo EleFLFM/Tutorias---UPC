@@ -130,26 +130,26 @@
                                             <strong><em>Registro Estudiantes</em></strong>
                                         </center>
                                     </h4>
-                                    <form>
+                                    <form action="agregar_usuario.php" method="post">
                                         <div class="row mb-3">
                                             <h3 style="color: #4fa570;"><em><u>Número de Documento</u></em></h3>                                        <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputDoc">
+                                                <input name="documento" required type="text" class="form-control" id="inputDoc">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <h3 style="color: #4fa570;"><em><u>Nombre</u></em></h3>                                        <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputName">
+                                                <input name="nombre" required type="text" class="form-control" id="inputName">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <h3 style="color: #4fa570;"><em><u>Usuario</u></em></h3>                                        <div class="col-sm-10">
-                                                <input type="email" class="form-control" id="inputEmail3">
+                                                <input name="usuario" required type="text" class="form-control" id="inputEmail3">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <h3 style="color: #4fa570;"><em><u>Password</u></em></h3>
                                             <div class="col-sm-10">
-                                                <input type="password" class="form-control" id="inputPassword3">
+                                                <input name="contraseña" required type="password" class="form-control" id="inputPassword3">
                                             </div>
                                         </div>
                                         
@@ -157,15 +157,15 @@
                                         <fieldset class="row mb-3">
                                             <div class="col-sm-10">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios"
-                                                        id="gridRadios1" value="option1" checked>
+                                                    <input class="form-check-input" type="radio" name="id_cargo" required
+                                                        id="gridRadios1" value="2" checked>
                                                     <label class="form-check-label" for="gridRadios1">
                                                         Estudiante
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios"
-                                                        id="gridRadios2" value="option2">
+                                                    <input class="form-check-input" type="radio" name="id_cargo"
+                                                        id="gridRadios2" value="3">
                                                     <label class="form-check-label" for="gridRadios2">
                                                         Docente
                                                     </label>
