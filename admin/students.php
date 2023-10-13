@@ -150,7 +150,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
-    $consulta_usuario = "SELECT * FROM usuarios";
+    $consulta_usuario = "SELECT * FROM usuarios WHERE idcargo=2";
     $resultado = $conn->query($consulta_usuario);
 
     if($resultado){
@@ -161,13 +161,7 @@ if ($conn->connect_error) {
             }
             $nombre = $row["nombre"];
             $usuario = $row["usuario"];
-            $id_cargo = $row["idcargo"];
-            if($id_cargo = $row["idcargo"]==2){
-                $id_cargo="docente";
-            }
-            elseif($id_cargo = $row["idcargo"]==3){
-                $id_cargo="estudiante";
-            }
+            $id_cargo = "Estudiante";
             $id_estado=$row["id_estado"];
             if($id_estado = $row["id_estado"]==1){
                 $id_estado="ACTIVO";
