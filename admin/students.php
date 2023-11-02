@@ -1,3 +1,12 @@
+<?php
+session_start();
+// require 'connectDB.php';
+$usuario=$_SESSION['usuario'];
+if(!isset($usuario)){
+header("Location: ../login.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,11 +43,11 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <!-- <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Cargando...</span>
             </div>
-        </div>
+        </div> -->
         <!-- Spinner End -->
 
 
@@ -57,14 +66,15 @@
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0" style="color: black;">
-                            <?php echo "Luis Mejia"
+                            <?php $usuario=strtoupper($usuario);
+                             echo $usuario
                             ?>
                         </h6>
                         <span>Admin</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="home-admin.html" class="nav-link " >
+                    <a href="home-admin.php" class="nav-link " >
                         <i class="bi bi-house-door-fill me-2">
                         </i>
                         Inicio
@@ -76,8 +86,8 @@
                             Agregar
                         </a> 
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="add_student.html" class="dropdown-item">Estudiante</a>
-                            <a href="add_teach.html" class="dropdown-item">Docente</a>
+                            <a href="add_student.php" class="dropdown-item">Estudiante</a>
+                            <a href="add_teach.php" class="dropdown-item">Docente</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -87,8 +97,8 @@
                             Tablas
                         </a> 
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="students.html" class="dropdown-item">Estudiante</a>
-                            <a href="teach.html" class="dropdown-item">Docente</a>
+                            <a href="students.php" class="dropdown-item">Estudiante</a>
+                            <a href="teach.php" class="dropdown-item">Docente</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +122,7 @@
                             <span class="d-none d-lg-inline-flex">Admin</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">Cerrar Sesión</a>
+                            <a href="../cerrar_sesion.php" class="dropdown-item">Cerrar Sesión</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +149,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php 
+                            <?php
 // Conexión a la base de datos
 $servername = "localhost";
 $username = "root";
@@ -150,57 +160,44 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
-    $consulta_usuario = "SELECT * FROM usuarios WHERE idcargo=2";
-    $resultado = $conn->query($consulta_usuario);
 
-    if($resultado){
-        while($row = $resultado->fetch_array()){
-            $documento = $row["documento"];
-            if($documento==null){
-                $documento=1;
-            }
-            $nombre = $row["nombre"];
-            $usuario = $row["usuario"];
+//con la condicion que no muestre cuando idcargo = 1 (admin)
+$consulta_usuario = "SELECT * FROM usuarios WHERE idcargo <> 1 AND idcargo=2";
+$resultado = $conn->query($consulta_usuario);
+
+if ($resultado) {
+    while ($row = $resultado->fetch_array()) {
+        $documento = $row["documento"];
+        if ($documento == null) {
+            $documento = 1;
+        }
+        $nombre = $row["nombre"];
+        $usuario = $row["usuario"];
+        $id_cargo = $row["idcargo"];
+        if ($id_cargo == 2) {
             $id_cargo = "Estudiante";
-            $id_estado=$row["id_estado"];
-            if($id_estado = $row["id_estado"]==1){
-                $id_estado="ACTIVO";
-            }
-            elseif($id_estado = $row["id_estado"]==2){
-                $id_estado="INACTIVO";
-            }
-            ?>
-
-                <!-- <div>
-                    <h2>//<?//php echo $nombre;?></h2>
-                    <div>
-                        <p>
-                            <b>Documento</b><?php //echo $documento ?><br>
-                            <b>nombre</b><?php //echo $nombre ?><br>
-                            <b>usuario</b><?php //echo $usuario ?><br>
-                            <b>rol</b><?php //echo $id_cargo ?><br>
-                    </p>
-                    </div>
-                </div> -->
-                <div class="container-fluid pt-4 px-2"> 
-                <div class="bg-secondary text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-1">
-                        <!-- <h3 class="mb-0" style="color: #4fa570;"><em><u>Estudiantes</u></em></h3> -->
-                    </div>
-                    <div class="table-responsiv<e">
-                        <table class="table text-start align-middle table-hover mb-0">
-                            
-                            <tbody>
-                                <tr>
-                                    <td><?php echo $documento ?></td>
-                                    <td><?php echo $nombre ?></td>
-                                    <td><?php echo $usuario ?></td>
-                                    <td><?php echo $id_cargo ?></td>
-                                    <td><?php echo $id_estado ?></td>
-                                </tr>
+        } elseif ($id_cargo == 3) {
+            $id_cargo = "Docente";
+        }
+        $id_estado = $row["id_estado"];
+        if ($id_estado == 1) {
+            $id_estado = "ACTIVO";
+        } elseif ($id_estado == 2) {
+            $id_estado = "INACTIVO";
+        }
+        ?>
+        <tr>
+            <td><?php echo $documento ?></td>
+            <td><?php echo $nombre ?></td>
+            <td><?php echo $usuario ?></td>
+            <td><?php echo $id_cargo ?></td>
+            <td><?php echo $id_estado ?></td>
+        </tr>
+    <?php
+    }
+}
+?>
                             </tbody>
-                            <?php }
-                        } ?>
                         </table>
                     </div>
                 </div>

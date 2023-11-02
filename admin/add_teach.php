@@ -45,7 +45,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
-                <a href="home-admin.html" class="navbar-brand mx-4 mb-3">
+                <a href="home-admin.php" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><img src="img/logo UPC.png" alt="" width="30px">
                         UPC-SA
                     </h3>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="home-admin.html" class="nav-link " >
+                    <a href="home-admin.php" class="nav-link " >
                         <i class="bi bi-house-door-fill me-2">
                         </i>
                         Inicio
@@ -75,8 +75,8 @@
                             Agregar
                         </a> 
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="add_student.html" class="dropdown-item">Estudiante</a>
-                            <a href="add_teach.html" class="dropdown-item">Docente</a>
+                            <a href="add_student.php" class="dropdown-item">Estudiante</a>
+                            <a href="add_teach.php" class="dropdown-item">Docente</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -86,8 +86,8 @@
                             Tablas
                         </a> 
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="students.html" class="dropdown-item">Estudiante</a>
-                            <a href="teach.html" class="dropdown-item">Docente</a>
+                            <a href="students.php" class="dropdown-item">Estudiante</a>
+                            <a href="teach.php" class="dropdown-item">Docente</a>
                         </div>
                     </div>
                 </div>

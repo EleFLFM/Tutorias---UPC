@@ -34,11 +34,11 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <!-- <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Cargando...</span>
             </div>
-        </div>
+        </div> -->
         <!-- Spinner End -->
 
 
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="home-admin.html" class="nav-link " >
+                    <a href="home-admin.php" class="nav-link " >
                         <i class="bi bi-house-door-fill me-2">
                         </i>
                         Inicio
@@ -75,8 +75,8 @@
                             Agregar
                         </a> 
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="add_student.html" class="dropdown-item">Estudiante</a>
-                            <a href="add_teach.html" class="dropdown-item">Docente</a>
+                            <a href="add_student.php" class="dropdown-item">Estudiante</a>
+                            <a href="add_teach.php" class="dropdown-item">Docente</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -86,8 +86,8 @@
                             Tablas
                         </a> 
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="students.html" class="dropdown-item">Estudiante</a>
-                            <a href="teach.html" class="dropdown-item">Docente</a>
+                            <a href="students.php" class="dropdown-item">Estudiante</a>
+                            <a href="teach.php" class="dropdown-item">Docente</a>
                         </div>
                     </div>
                 </div>
@@ -131,204 +131,59 @@
                                     <th scope="col"><u>Documento</u></th>
                                     <th scope="col"><u>Nombre</u></th>
                                     <th scope="col"><u>Usuario</u></th>
-                                    <th scope="col"><u>Contraseña</u></th>
+                                    <!-- <th scope="col"><u>Contraseña</u></th> -->
                                     <th scope="col"><u>Cargo</u></th>
                                     <th scope="col"><u>Estado</u></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td>  
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td>  
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td>  
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
-                                <tr>
-                                    <td>1147885179</td>
-                                    <td>Pedro Perez</td>
-                                    <td>pedroper</td>
-                                    <td>Pedro@123</td>
-                                    <td>Estudiante</td>
-                                    <td>Activo</td> 
-                                </tr>
+                            
+                            <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "roles";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+//con la condicion que no muestre cuando idcargo = 1 (admin)
+$consulta_usuario = "SELECT * FROM usuarios WHERE idcargo <> 1 AND idcargo=3";
+$resultado = $conn->query($consulta_usuario);
+
+if ($resultado) {
+    while ($row = $resultado->fetch_array()) {
+        $documento = $row["documento"];
+        if ($documento == null) {
+            $documento = 1;
+        }
+        $nombre = $row["nombre"];
+        $usuario = $row["usuario"];
+        $id_cargo = $row["idcargo"];
+        if ($id_cargo == 2) {
+            $id_cargo = "Estudiante";
+        } elseif ($id_cargo == 3) {
+            $id_cargo = "Docente";
+        }
+        $id_estado = $row["id_estado"];
+        if ($id_estado == 1) {
+            $id_estado = "ACTIVO";
+        } elseif ($id_estado == 2) {
+            $id_estado = "INACTIVO";
+        }
+        ?>
+        <tr>
+            <td><?php echo $documento ?></td>
+            <td><?php echo $nombre ?></td>
+            <td><?php echo $usuario ?></td>
+            <td><?php echo $id_cargo ?></td>
+            <td><?php echo $id_estado ?></td>
+        </tr>
+    <?php
+    }
+}
+?>
                             </tbody>
                         </table>
                     </div>

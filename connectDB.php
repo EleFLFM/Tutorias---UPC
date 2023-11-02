@@ -22,12 +22,15 @@ if ($filas) {
 if($id_estado == 1){
     if ($idcargo == 1) {
         // Mostrar la página de administrador
-        header("location: admin.php");
+        header("location: admin/home-admin.php");
     } elseif ($idcargo == 2) {
-        // Redirigir a la página de clientes
+        // Redirigir a la página de estudiantes
         header("location: courses.php");
 }
-    
+elseif ($idcargo == 3) {
+    // Redirigir a la página de docentes
+    header("location: courses.php");
+}
     } else {
         echo "No tienes permisos para acceder a esta página. Este usuario está inactivo";
         exit();
