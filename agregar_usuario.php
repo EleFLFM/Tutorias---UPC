@@ -28,11 +28,13 @@ function procesar_usuario($conn) {
                 ?>
                 <h1 class="bad">El usuario ya existe</h1>
                 <?php    
-        } 
+        }
         else {
+            //cifrar contraseña
+            $hash_contraseña = password_hash($contraseña, PASSWORD_DEFAULT);
             // Insertar los datos en la tabla de la base de datos
         $sql = "INSERT INTO usuarios (documento, nombre, usuario, contraseña, id_cargo)
-        VALUES ('$documento', '$nombre', '$usuario', '$contraseña', '$idcargo', '$id_estado')";
+        VALUES ('$documento', '$nombre', '$usuario', '$hash_contraseña', '$idcargo', '$id_estado')";
     }
     if ($conn->query($sql) === TRUE) {
         include("login.php");
