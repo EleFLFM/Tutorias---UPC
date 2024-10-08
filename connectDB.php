@@ -16,8 +16,8 @@ if ($filas) {
     $_SESSION['usuario'] = $usuario;
     $_SESSION['idcargo'] = $fila['idcargo'];
     $idcargo = $_SESSION['idcargo'];
-    $_SESSION['id_estado'] = $fila['id_estado'];
-    $id_estado = $_SESSION['id_estado'];
+    // $_SESSION['id_estado'] = $fila['id_estado'];
+    // $id_estado = $_SESSION['id_estado'];
     
 if($id_estado == 1){
     if ($idcargo == 1) {
